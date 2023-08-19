@@ -1,0 +1,43 @@
+.sideBar {
+    background-color: #eee;
+    position: sticky;
+}
+
+.sideBar ul {
+    margin-top: 30px;
+}
+
+.sideBar li {
+    padding: 4px 6px;
+    text-align: center;
+}
+
+.sideBar a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+table tbody .btnsConrols {
+    display: flex;
+    gap: 10px;
+}
+
+table tbody img {
+    width: 50px;
+    height: 50px;
+}
+
+.showProductImg {
+    width: 300px;
+}
+
+.showProductTit {
+    font-size: 22px;
+    color: blue;
+}
+
+.showProductTit span {
+    font-size: 18px;
+    color: #777;
+}
