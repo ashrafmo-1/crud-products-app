@@ -7,7 +7,7 @@ function Products() {
     const [products, setproducts] = useState([])
 
     const getProducts = () => {
-        fetch('http://localhost:9000/products').then(res => res.json()).then(data => setproducts(data));
+        fetch('https://database-products.onrender.com/products').then(res => res.json()).then(data => setproducts(data));
     }
     useEffect(() => {
         getProducts()
@@ -17,7 +17,7 @@ function Products() {
         Swal.fire({
             title: `are you sure delete - ${product.title}`, showCancelButton: true, icon: 'warning'}).then(data => {
             if (data.isConfirmed === true) {
-                fetch(`http://localhost:9000/products/${product.id}`, {method: 'delete'}).then(res => res.json()).then(data => getProducts())
+                fetch(`https://database-products.onrender.com/products/${product.id}`, {method: 'delete'}).then(res => res.json()).then(data => getProducts())
             } else {
                 return false
             }

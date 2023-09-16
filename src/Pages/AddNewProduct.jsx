@@ -15,7 +15,7 @@ function AddNewProduct() {
     let disapleFormSubmet = (ev) => {
         ev.preventDefault()
         console.log(title, price, category);
-        fetch('http://localhost:9000/products', {
+        fetch('https://database-products.onrender.com/products', {
             method: "post",
             headers: {
                 "Content-Type": "application/json",

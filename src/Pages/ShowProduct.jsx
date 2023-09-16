@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 function ShowProduct() {
-  let { prodID } = useParams()
-   let [product, setProduct] = useState([])
+    let { prodID } = useParams()
+    let [product, setProduct] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:9000/products/${prodID}`).then(res => res.json()).then(prod => setProduct(prod));
+        fetch(`https://database-products.onrender.com/products/${prodID}`).then(res => res.json()).then(prod => setProduct(prod));
     }, [])
 
 
@@ -17,7 +17,7 @@ function ShowProduct() {
       <p> {product.description} </p>
       <div className="d-flex justify-content-around mt-5 mb-5">
         <h1> Rete: {product.rating?.rate} </h1>
-       <h1> Count Product: {product.rating?.count} </h1>
+        <h1> Count Product: {product.rating?.count} </h1>
       </div>
     </div>
   )
